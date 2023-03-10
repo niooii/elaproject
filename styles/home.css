@@ -1,3 +1,9 @@
+:root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+    --spacingvertical: 15vmin;
+}
+
 .centered {
     transform: translateY(20%);;
     position: relative;
@@ -12,11 +18,12 @@
 
 #para {
     position: relative;
-    width: 20%;
-    text-wrap: normal;
+    width: 100%;
+    word-wrap: normal;
+    font-size: 3vmax;
 }
 
-.button {
+.button1 {
     position:relative;
     width: 20%;
     background: whitesmoke;
@@ -24,14 +31,25 @@
     border-radius: 3vmin;
     border: 0.5vmin solid dimgray;
     transform: translateY(150%);
-    margin-bottom: 10vmin;
+    margin-bottom: 15vmin;
+}
+
+.button2 {
+    position:relative;
+    width: 20%;
+    background: whitesmoke;
+    height: 12vmax;
+    border-radius: 3vmin;
+    border: 0.5vmin solid dimgray;
+    transform: translateY(150%);
+    margin-bottom: 15vmin;
 }
 
 .col1 {
     transform: translateX(18%);
 }
 .col2 {
-    transform: translate(62%, -116.4%);
+    transform: translate(62%);
 }
 
 #1 {
