@@ -1,6 +1,46 @@
 .centered {
-    position: absolute;
+    transform: translateY(20%);;
+    position: relative;
     text-align: center;
+}
+
+#title {
     top: 20%;
     width: 100%;
+    font-size: 3vw;
+}
+
+#para {
+    position: relative;
+    width: 20%;
+    text-wrap: normal;
+}
+
+.button {
+    position:relative;
+    width: 20%;
+    background: whitesmoke;
+    height: 12vmax;
+    border-radius: 3vmin;
+    border: 0.5vmin solid dimgray;
+    transform: translateY(150%);
+    margin-bottom: 10vmin;
+}
+
+.col1 {
+    transform: translateX(18%);
+}
+.col2 {
+    transform: translate(62%, -116.4%);
+}
+
+#1 {
+
+}
+
+#break1 {
+    position: relative;
+    border: 0.3vmin solid whitesmoke;
+    border-radius: 0.2vmin;
+    transform: translateY(14vmax);
 }
