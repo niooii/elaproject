@@ -1,69 +1,184 @@
 :root {
-    --blue: #1e90ff;
-    --white: #ffffff;
-    --spacingvertical: 15vmin;
+    --bg-color: rgb(20, 20, 20);
+    --card-color: rgb(23, 23, 23);
+    background-color: var(--bg-color);
 }
 
 .centered {
-    transform: translateY(20%);;
+    display: flex;
+    width: 50%;
+    text-align: justify;
+    margin: auto;
+    justify-content: center;
+    overflow: auto;
+    padding: 0;
     position: relative;
+    background-color: rgba(255, 255, 255, 0.13);
+    border-radius: 10px;
+    cursor: none;
+    pointer-events: none;
+    height: 40em;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: linear-gradient();
+}
+
+.center-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    min-height: 100vh;
 }
 
 #title {
-    top: 20%;
-    width: 100%;
-    font-size: 5vw;
-}
-
-#para {
+    text-align: center;
     position: relative;
-    width: 100%;
-    word-wrap: normal;
-    font-size: 3vmax;
+    margin-top: 0.5em;
+    font-size: 6.3em;
 }
 
-.button1 {
-    position:relative;
-    width: 20%;
-    background: whitesmoke;
-    height: 12vmax;
-    border-radius: 3vmin;
-    border: 0.5vmin solid dimgray;
-    transform: translateY(150%);
-    margin-bottom: 15vmin;
+#buttons {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+    min-width: 100%;
+    justify-content: center;
+    overflow: auto;
+    padding: 0;
 }
 
-.button2 {
-    position:relative;
-    width: 20%;
-    background: whitesmoke;
-    height: 12vmax;
-    border-radius: 3vmin;
-    border: 0.5vmin solid dimgray;
-    transform: translateY(150%);
-    margin-bottom: 15vmin;
+#buttons {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 20px);
+    gap: 20px;
+    max-width: 916px;
 }
 
-.col1 {
-    transform: translateX(18%);
-}
-.col2 {
-    transform: translate(62%);
+#buttons:hover > .button > .button-border {
+    opacity: 1;
 }
 
-#1 {
-
-}
-
-#break1 {
+.button {
     position: relative;
-    border: 0.3vmin solid whitesmoke;
-    border-radius: 0.2vmin;
-    transform: translateY(14vmax);
+    background-color: rgba(255, 255, 255, 0.13);
+    border-radius: 10px;
+    cursor: pointer;
+    height: 260px;
+    width: 300px;
 }
 
-#buttonsection {
-    position:relative;
-    transform: translateY(2vmax)
+.button::before,
+.button > .button-border {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 500ms;
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    width: 100%;
+}
+
+.button::before {
+    background: radial-gradient(
+            800px circle at var(--mouse-x) var(--mouse-y),
+            rgba(255, 255, 255, 0.06),
+            transparent 40%
+    );
+    z-index: 3;
+}
+
+.button > .button-border {
+    background: radial-gradient(
+            800px circle at var(--mouse-x) var(--mouse-y),
+            rgba(255, 255, 255, 0.3),
+            transparent 40%
+    );
+    z-index: 1;
+}
+
+.button:hover::before {
+    opacity: 1;
+}
+
+.button > .button-content {
+    background-color: var(--card-color);
+    height: calc(100% - 2px);
+    width: calc(100% - 2px);
+    border-radius: inherit;
+    margin: 1px;
+    position: relative;
+    z-index: 2;
+}
+
+#buttonsection{
+
+}
+
+/* button content styling woooo*/
+h1, h2, h3, h4, span {
+    color: rgb(240, 240, 240);
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    margin: 0px;
+}
+
+i {
+    color: rgb(240, 240, 240);
+}
+
+.button-img {
+    align-items: center;
+    display: flex;
+    height: 140px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.button-img > i {
+    margin-top: 0.32em;
+    font-size: 6em;
+    opacity: 0.25;
+}
+
+.button-info-wrapper {
+    margin-top: 1em;
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    padding: 0px 20px;
+}
+
+.button-info {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+}
+
+.button-info > i {
+    font-size: 1em;
+    height: 20px;
+    line-height: 20px;
+}
+
+.button-info-title > h3 {
+    font-size: 1.25em;
+    line-height: 20px;
+}
+
+.button-info-title > h4 {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1em;
+    margin-top: 8px;
 }
