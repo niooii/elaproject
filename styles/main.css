@@ -1,6 +1,13 @@
+:root {
+    --bg-color: rgb(20, 20, 20);
+    --card-color: rgb(23, 23, 23);
+    background-color: var(--bg-color);
+}
+
 html {
+    height: 100%;
+    width: 100%;
+    z-index: 2;
     color: whitesmoke;
-    background-color: black;
-    font-family: "Times New Roman", monospace;
 }
 
